@@ -5,6 +5,7 @@ import SearchMeal from '../views/SearchMeal.vue'
 import MealsByIngredients from '../views/MealsByIngredients.vue'
 import MealsByLetter from '../views/MealsByLetter.vue'
 import DefaultLayoyt from '../components/DefaultLayoyt.vue'
+import MealsDetail from '../views/MealsDetail.vue'
 
 const routes = [
     {

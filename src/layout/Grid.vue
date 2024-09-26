@@ -6,6 +6,7 @@
       :strMealThumb="element.strMealThumb"
       :strMeal="element.strMeal"
       :strSource="element.strSource"
+      :idMeal="element.idMeal"
     ></Card>
   </div>
 </template>
