@@ -17,8 +17,6 @@
         </router-link>
 
         <div class="flex items-center lg:order-2">
-         
-         
           <button
             data-collapse-toggle="mobile-menu-2"
             type="button"
@@ -61,37 +59,49 @@
             class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
           >
             <li>
-                <router-link :to="{ name: 'home' }" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                aria-current="home">
-                    Home
-                 </router-link>
+              <router-link
+                :to="{ name: 'home' }"
+                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                aria-current="home"
+              >
+                Home
+              </router-link>
             </li>
             <li>
-                <router-link :to="{ name: 'search-meals' }" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                aria-current="search-meals">
-                    Search Meals
-                 </router-link>
+              <router-link
+                :to="{ name: 'search-meals' }"
+                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                aria-current="search-meals"
+              >
+                Search Meals
+              </router-link>
             </li>
             <li>
-                <router-link :to="{ name: 'meals-by-letter' }" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                aria-current="meals-by-letter">
-                    Meals By Letter
-                 </router-link>
+              <router-link
+                :to="{ name: 'meals-by-letter' }"
+                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                aria-current="meals-by-letter"
+              >
+                Meals By Letter
+              </router-link>
             </li>
             <li>
-                <router-link :to="{ name: 'meals-by-ingredients' }" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                aria-current="meals-by-ingredients">
-                    Meals By ingredients
-                 </router-link>
+              <router-link
+                :to="{ name: 'meals-by-ingredients' }"
+                class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
+                aria-current="meals-by-ingredients"
+              >
+                Meals By ingredients
+              </router-link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <div>
+      <Jumbotron />
+    </div>
   </header>
-  <main>
-    <Jumbotron />
-  </main>
 </template>
 
 <script setup>

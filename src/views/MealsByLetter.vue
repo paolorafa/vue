@@ -42,9 +42,9 @@
         </button>
       </div>
     </form>
-  </div>
-  <div class="flex justify-center my-3">
-    <Grid> </Grid>
+    <div class="flex justify-center my-3">
+      <Grid />
+    </div>
   </div>
 </template>
 
