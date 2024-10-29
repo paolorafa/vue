@@ -17,4 +17,6 @@ import store from "../store";
 import { computed } from "vue";
 
 const meal = computed(() => store.state.searchMeal);
+console.log(meal);
+
 </script>

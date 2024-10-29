@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeComponent from '../views/HomeComponent.vue';
 import List from '../views/List.vue'
-import SearchMeal from '../views/SearchMeal.vue'
+import SearchByLetter from '../views/SearchByLetter.vue'
 import MealsByIngredients from '../views/MealsByIngredients.vue'
-import MealsByLetter from '../views/MealsByLetter.vue'
+import MealsByName from '../views/MealsByName.vue'
 import DefaultLayoyt from '../components/DefaultLayoyt.vue'
 import MealsDetail from '../views/MealsDetail.vue'
 
@@ -13,14 +13,14 @@ const routes = [
         component: DefaultLayoyt,
         children: [
             {
-                path: '/',
+                path: '',
                 name: 'home',
-                component: HomeComponent
+                
             },
             {
-                path: '/search-meals/:meal?',
+                path: '/search-meals',
                 name: 'search-meals',
-                component: SearchMeal
+                component: SearchByLetter
             },
             {
                 path: '/meals-by-ingredients/:ingredient?',
@@ -28,14 +28,14 @@ const routes = [
                 component: MealsByIngredients
             },
             {
-                path: '/meals-by-letter/:letter?',
+                path: '/meals-by-letter',
                 name: 'meals-by-letter',
-                component: MealsByLetter
+                component: MealsByName
             },
             {
-                path: '/letter/:letter',
+                path: '/search/:letter',
                 name: 'byLetter',
-                component: List
+                component: SearchByLetter
             },
             {
                 path: '/meal/:id',

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center w-[900px] mx-auto bg-white border border-gray-200 rounded-lg shadow  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+    class="flex flex-col items-center max-w-[900px] mx-auto bg-white border border-gray-200 rounded-lg shadow  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
   >
     
     <div class="flex flex-col justify-center ">  
@@ -16,10 +16,14 @@
           {{ meal.strMeal }}
         </h5>
         <div class="dark:text-white">{{ meal.idMeal }}</div>
-        <div class="mb-3 font-normal text-gray-700 dark:text-gray-400 flex justify-between">
-            <p class="font-bold  text-white">Food typical: {{ meal.strArea }}</p>
-            <p class="font-bold text-white">Categoria: {{ meal.strCategory }}</p>
-        </div>
+          <div class="mb-3 font-normal text-gray-700 dark:text-gray-400 flex justify-between">
+              <p class="font-bold  text-white">Food typical: {{ meal.strArea }}</p>
+              <p class="font-bold text-white">Categoria: {{ meal.strCategory }}</p>
+          </div>
+          <div class="text-white my-2">
+              {{ meal.strInstructions }}
+            </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 ">
           <div>
             <h3 class=" text-white text-2xl font-semibold mb-3">Ingredienti:</h3>
@@ -43,14 +47,7 @@
           </div>
       </div>
     </div>
-
-    <a
-      :href="meal.strSource"
-      target="_blank"
-      class="flex flex-col py-2 px-4 border-2 w-24 border-red-600 rounded text-white hover:bg-red-600 relative z-auto mt-2 md:mt-0"
-    >
-      YouTube
-    </a>
+    <ButtonYouTube :href="meal.strYoutube">YouTube</ButtonYouTube>
   </div>
 </template>
 
@@ -59,6 +56,7 @@
 import {computed, onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import axiosClient from "../axiosClient";
+import ButtonYouTube from "../components/ButtonYouTube.vue";
 
 const route = useRoute();
 const meal = ref({});
@@ -103,14 +101,13 @@ const Istruzioni = computed(()=>{
   const arrayIstruzioni = [];
   for (let i=1; i<=20 ; i++){
     const istruzione = meal.value[`strMeasure${i}`];
-    console.log(istruzione);
+    
     if (istruzione && istruzione != ""){
       arrayIstruzioni.push(istruzione)
     }
    
   }
-  console.log(arrayIstruzioni);
-  
+   
   return arrayIstruzioni;
 })
 
