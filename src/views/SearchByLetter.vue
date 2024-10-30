@@ -6,8 +6,9 @@
                 :to="{ name: 'byLetter', params: { letter } }"
                 v-for="letter in letters"
                 :key="letter"
+                class="text-2xl"
             >
-                {{ letter }}
+                {{ letter }} /
             </router-link>
         </div>
 

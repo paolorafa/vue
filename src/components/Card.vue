@@ -8,7 +8,7 @@
       class="flex flex-col md:flex-row w-full md:flex-wrap"
     >
       <img
-        class="object-cover w-full rounded-t-lg h-96   md:rounded-none md:rounded-s-lg"
+        class="object-cover w-full rounded h-96"
         :src="strMealThumb"
         alt="Meal image"
       />
