@@ -1,11 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeComponent from '../views/HomeComponent.vue';
-import List from '../views/List.vue'
 import SearchByLetter from '../views/SearchByLetter.vue'
 import MealsByIngredients from '../views/MealsByIngredients.vue'
 import MealsByName from '../views/MealsByName.vue'
 import DefaultLayoyt from '../components/DefaultLayoyt.vue'
 import MealsDetail from '../views/MealsDetail.vue'
+import Ingredients from '../views/Ingredients.vue'
 
 const routes = [
     {
@@ -23,7 +22,12 @@ const routes = [
                 component: SearchByLetter
             },
             {
-                path: '/meals-by-ingredients/:ingredient?',
+                path: '/ingredients',
+                name: 'ingredients',
+                component: Ingredients
+            },
+            {
+                path: '/meals-by-ingredients/:ingredient',
                 name: 'meals-by-ingredients',
                 component: MealsByIngredients
             },

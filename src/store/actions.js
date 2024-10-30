@@ -23,8 +23,7 @@ export function SearchByLetter({commit}, letter){
 export function SearchByIngredient({commit}, ingredient){
     axiosClient.get(`filter.php?i=${ingredient}`)
     .then(({data})=>{
-
-        commit('setSearchByIngredient', data.meals)
-               
+        commit('setSearchByIngredient', data.meals || [])
+        console.log(data.meals);
     })
 }

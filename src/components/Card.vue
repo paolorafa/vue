@@ -5,10 +5,10 @@
     <!-- Router link per navigare ai dettagli del pasto -->
     <router-link
       :to="{ name: 'meals-detail', params: { id: idMeal } }"
-      class="flex flex-col md:flex-row w-full"
+      class="flex flex-col md:flex-row w-full md:flex-wrap"
     >
       <img
-        class="object-cover rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-s-lg mx-2 my-2"
+        class="object-cover w-full rounded-t-lg h-96   md:rounded-none md:rounded-s-lg"
         :src="strMealThumb"
         alt="Meal image"
       />
@@ -27,14 +27,9 @@
       </div>
     </router-link>
 
-    <!-- Link separato per YouTube -->
-    <a
-      :href="strSource"
-      target="_blank"
-      class="flex justify-center h-10 px-4 border-2 border-red-600 rounded text-white hover:bg-red-600 relative z-auto mt-2 "
-    >
-      YouTube
-    </a>
+   
+    <button :href="strSource" target="_blank" type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">YouTube</button>
+
   </div>
 </template>
 
